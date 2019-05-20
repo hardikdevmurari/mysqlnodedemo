@@ -32,9 +32,31 @@
 // 		console.log("table created");
 // 	});
 // });
-var http =require ('http');
 
-http.createServer(function (request,response){
-	response.writeHead(200,{"content-Type":"text/plain"});
-	response.end("hellow world");
-}).listen(process.env.PORT);
+// var http =require ('http');
+
+// http.createServer(function (request,response){
+// 	response.writeHead(200,{"content-Type":"text/plain"});
+// 	response.end("hellow world");
+// }).listen(process.env.PORT);
+
+var mysql = require('mysql');
+    port = process.env.PORT || 4205;
+
+if (port === 4205) {
+
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        port: 3306,
+        user: 'root',
+        password: '',
+        database: 'db_name',
+        insecureAuth: true
+    });
+} else {
+    // LIVE SERVER
+}
+
+connection.connect();
+
+module.exports = connection;
