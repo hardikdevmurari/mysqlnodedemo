@@ -32,9 +32,9 @@
 // 		console.log("table created");
 // 	});
 // });
-var http =require ('http');
+// var http =require ('http');
 
-http.createServer(function (request,response){
-	response.writeHead(200,{"content-Type":"text/plain"});
-	response.end("hellow world");
-}).listen(process.env.PORT);
+// http.createServer(function (request,response){
+// 	response.writeHead(200,{"content-Type":"text/plain"});
+// 	response.end("hellow world");
+// }).listen(process.env.PORT);
