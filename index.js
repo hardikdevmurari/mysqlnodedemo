@@ -6,7 +6,7 @@ const con = mysql.createConnection({
 	password:"",
 	database: "nodedb"
 });
-
+//
 // con.connect(function (err){
 // 	if (err) throw err;
 // 	console.log("connnceted");
